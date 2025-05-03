@@ -1,0 +1,395 @@
+{
+    "Aged Meat": {
+      "receita": {
+        "Beef": 75,
+        "Salt": 10,
+        "Garlic": 208
+      }
+    },
+    "Bakers Basics": {
+      "receita": {
+        "Milk": 97,
+        "Egg": 240,
+        "Ground Flour": 230
+      }
+    },
+    "Barbecue Specialty": {
+      "receita": {
+        "Beef": 68,
+        "Chicken": 26,
+        "Coal": 42,
+        "Honey": 100
+      }
+    },
+    "Basic Rations": {
+      "receita": {
+        "Wheat": 316,
+        "Corn": 110,
+        "Apple": 35,
+        "Shank": 25
+      }
+    },
+    "Berry Basket": {
+      "receita": {
+        "Strawberry": 200,
+        "Blueberry": 445,
+        "Moonberry": 30,
+        "Sunberry": 100
+      }
+    },
+    "Bittersweet Delights": {
+      "receita": {
+        "Cherry": 65,
+        "Ambar Dust": 140,
+        "Green Cap": 180,
+        "Thin Roots": 105
+      }
+    },
+    "Brined Shank": {
+      "receita": {
+        "Shank": 70,
+        "Salt": 14,
+        "Pepper": 165
+      }
+    },
+    "Building Materials": {
+      "receita": {
+        "Stone": 240,
+        "Small Log": 185,
+        "Hide": 68
+      }
+    },
+    "Butcher’s Box": {
+      "receita": {
+        "Chicken": 38,
+        "Beef": 90,
+        "Shank": 30,
+        "Cheese": 5
+      }
+    },
+    "Campfire Roast": {
+      "receita": {
+        "Small Log": 120,
+        "Stone": 220,
+        "Chicken": 68,
+        "Potato": 155
+      }
+    },
+    "Cavedweller Findings": {
+      "receita": {
+        "Cobalt Ore": 110,
+        "Stone": 148,
+        "Glowing Spores": 120,
+        "Thorny Roots": 120
+      }
+    },
+    "Crafting Basics": {
+      "receita": {
+        "Copper Ore": 140,
+        "Hide": 55,
+        "Small Log": 200
+      }
+    },
+    "Crisp Produce": {
+      "receita": {
+        "Apple": 55,
+        "Brocolli": 55,
+        "Pea": 133,
+        "Bean": 133
+      }
+    },
+    "Dairy Delivery": {
+      "receita": {
+        "Milk": 80,
+        "Cheese": 22,
+        "Egg": 246
+      }
+    },
+    "Elemental Sprout": {
+      "receita": {
+        "Crystal Leaf": 125,
+        "Rocky Cap": 120,
+        "Fire Cap": 90
+      }
+    },
+    "Exotic Fruits": {
+      "receita": {
+        "Watermelon": 52,
+        "Sunberry": 70,
+        "Moonberry": 62
+      }
+    },
+    "Exotic Spices": {
+      "receita": {
+        "Sunberry": 60,
+        "Flaming Spores": 100,
+        "Chest Warmer": 150,
+        "Juicy Roots": 92
+      }
+    },
+    "Fried Chicken": {
+      "receita": {
+        "Chicken": 75,
+        "Onion": 80,
+        "Garlic": 120,
+        "Ground Flour": 95
+      }
+    },
+    "Fruit Basket": {
+      "receita": {
+        "Grape": 136,
+        "Watermelon": 30,
+        "Cherry": 45
+      }
+    },
+    "General Spices": {
+      "receita": {
+        "Garlic": 148,
+        "Onion": 105,
+        "Pepper": 118,
+        "Salt": 13
+      }
+    },
+    "Glaceforde Explorers Kit": {
+      "receita": {
+        "Wool": 106,
+        "Small Log": 110,
+        "Coal": 100,
+        "Cotton": 20
+      }
+    },
+    "Hardy Roots": {
+      "receita": {
+        "Carrot": 286,
+        "Purple Roots": 65,
+        "Cold Roots": 175,
+        "Thin Roots": 375
+      }
+    },
+    "Juicers Box": {
+      "receita": {
+        "Apple": 64,
+        "Strawberry": 162,
+        "Cherry": 26,
+        "Banana": 12
+      }
+    },
+    "Kabbar’s Omelets": {
+      "receita": {
+        "Egg": 145,
+        "Cheese": 35,
+        "Pepper": 148
+      }
+    },
+    "Kindling Kit": {
+      "receita": {
+        "Small Log": 175,
+        "Coal": 124,
+        "Cotton": 70
+      }
+    },
+    "Lush Fibers": {
+      "receita": {
+        "Wool": 110,
+        "Emerald Spores": 300,
+        "Juicy Roots": 285,
+        "Feather": 25
+      }
+    },
+    "Margrove Ale Ingredients": {
+      "receita": {
+        "Wheat": 400,
+        "Acorn": 12,
+        "Pumpkin": 45
+      }
+    },
+    "Moisture Aging": {
+      "receita": {
+        "Juicy Roots": 400,
+        "Dry Stem": 170,
+        "Shank": 50,
+        "Onion": 43
+      }
+    },
+    "Necrobane Kit": {
+      "receita": {
+        "Bloody Bud": 250,
+        "Brightday": 275,
+        "Feather": 48
+      }
+    },
+    "Noble Delicacies": {
+      "receita": {
+        "Moonberry": 175,
+        "Acorn": 15,
+        "Pepper": 70
+      }
+    },
+    "Ocean Stimulants": {
+      "receita": {
+        "Fungal Dust": 380,
+        "Pirate's Bliss": 290,
+        "Tin Ore": 160
+      }
+    },
+    "Pickled Vegetables": {
+      "receita": {
+        "Cabbage": 238,
+        "Carrot": 300,
+        "Salt": 12
+      }
+    },
+    "Pie Making Kit": {
+      "receita": {
+        "Apple": 56,
+        "Sunberry": 65,
+        "Cherry": 25,
+        "Ground Flour": 60
+      }
+    },
+    "Pirates Anesthetic": {
+      "receita": {
+        "Numbing Thorns": 245,
+        "Pirate's Cap": 280,
+        "Juicy Stem": 280
+      }
+    },
+    "Poisoner’s Kit": {
+      "receita": {
+        "Toxic Stem": 120,
+        "Thin Roots": 240,
+        "Hagthorn": 150,
+        "Thorny Roots": 150
+      }
+    },
+    "Ravencrest Finest Wears": {
+      "receita": {
+        "Cotton": 125,
+        "Wool": 78,
+        "Hide": 50
+      }
+    },
+    "Ravencrest Greens": {
+      "receita": {
+        "Brocolli": 128,
+        "Pea": 112,
+        "Cabbage": 160
+      }
+    },
+    "Rohna Smoked Ham": {
+      "receita": {
+        "Shank": 40,
+        "Acorn": 30,
+        "Pea": 92,
+        "Salt": 8
+      }
+    },
+    "Sailor’s Remedy": {
+      "receita": {
+        "Carrot": 260,
+        "Orange": 20,
+        "Bean": 155,
+        "Blueberry": 535
+      }
+    },
+    "Sajecho Fruit Basket": {
+      "receita": {
+        "Banana": 40,
+        "Watermelon": 20,
+        "Orange": 14,
+        "Grape": 94
+      }
+    },
+    "Sajecho’s Spices": {
+      "receita": {
+        "Salt": 15,
+        "Orange": 20,
+        "Onion": 150,
+        "Pepper": 55
+      }
+    },
+    "Seabreeze Rum": {
+      "receita": {
+        "Corn": 200,
+        "Cabbage": 65,
+        "Banana": 30,
+        "Blueberry": 212
+      }
+    },
+    "Seer’s Support Pack": {
+      "receita": {
+        "Shadow Stem": 190,
+        "Mindbender": 132,
+        "Feather": 20
+      }
+    },
+    "Settler’s Rations": {
+      "receita": {
+        "Corn": 200,
+        "Potato": 650,
+        "Shank": 56
+      }
+    },
+    "Slums Provisions": {
+      "receita": {
+        "Small Log": 200,
+        "Shank": 65,
+        "Potato": 690
+      }
+    },
+    "Sombershade Toppings": {
+      "receita": {
+        "Dread Bloom": 110,
+        "Dusk Dust": 170,
+        "Thorny Roots": 240,
+        "Fungal Dust": 220
+      }
+    },
+    "Sombreshade’s Pie": {
+      "receita": {
+        "Pumpkin": 60,
+        "Milk": 60,
+        "Ground Flour": 110,
+        "Honey": 80
+      }
+    },
+    "Strawberry Cakes": {
+      "receita": {
+        "Ground Flour": 186,
+        "Milk": 32,
+        "Strawberry": 400,
+        "Honey": 120
+      }
+    },
+    "Vegetable Stew": {
+      "receita": {
+        "Brocolli": 55,
+        "Pumpkin": 55,
+        "Bean": 215,
+        "Potato": 250
+      }
+    },
+    "Widow’s Box": {
+      "receita": {
+        "Lizard's Delight": 300,
+        "Crystal Cap": 140,
+        "Wailing Leaf": 155
+      }
+    },
+    "Winemakers Kit": {
+      "receita": {
+        "Grape": 200,
+        "Blueberry": 385,
+        "Moonberry": 92
+      }
+    },
+    "Yornish Seasonings": {
+      "receita": {
+        "Twisted Flower": 100,
+        "Withered Stem": 185,
+        "Fungal Dust": 500,
+        "Salt": 14
+      }
+    }
+  }
+  
