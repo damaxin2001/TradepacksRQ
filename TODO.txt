@@ -1,3 +1,4 @@
-Painel com todo o tipo de farm nas lands
+Painel com todo o tipo de farm nas lands & painel com lucro de tradepacks com apenas custo
 Colocar opçoes de boosts nos tradepacks(reputaçao +5% do preço etc)
 pagina de ticket support/recomendaçoes
+Ir buscar imagens dos itens

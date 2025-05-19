@@ -203,7 +203,7 @@ function inicializarUI() {
       html += `
         <label>${item} (${ingredientes[item]} unidades):</label>
         <input type="number" min="0" value="${preco}" 
-          onchange="localStorage.setItem('${precoKey}', this.value); atualizarTudo();">
+          onchange="localStorage.setItem(&quot;${precoKey}&quot;, this.value); atualizarTudo();">
       `;
     }
     receitaContainer.innerHTML = html;
@@ -253,7 +253,7 @@ function inicializarUI() {
           const tiles = distancias[chaveDistancia];
   
           if (tiles) {
-            const valor = (20000 + (20 * tiles)) * (percentagem / 100);
+            const valor = (20000 + (18 * tiles)) * (percentagem / 100);
             const lucro = valor - custo;
             listaLucros.push({
               nome,
@@ -332,7 +332,7 @@ function inicializarUI() {
     let lucroValor = 0;
 
     if (tiles) {
-      const valor = (20000 + (20 * tiles)) * (percentagem / 100);
+      const valor = (20000 + (18 * tiles)) * (percentagem / 100);
       lucroValor = valor - custo;
       valorStr = `${valor} silver`;
       lucroStr = `${lucroValor.toFixed(0)} silver`;
