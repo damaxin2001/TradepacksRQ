@@ -137,7 +137,6 @@ const distancias = {
   "Dras Ashar|Dras Ashar": 0,
 };
 
-// Garantir que todas as chaves sejam simétricas
 const distanciasNormalizadas = {};
 
 for (const chave in distancias) {
@@ -151,7 +150,6 @@ Object.assign(distancias, distanciasNormalizadas);
 let tradepacks = {};
 
 document.addEventListener("DOMContentLoaded", async () => {
-  // Carrega os tradepacks do ficheiro JSON
   try {
     const response = await fetch("js/tradepacks.json");
     tradepacks = await response.json();
@@ -169,7 +167,6 @@ function inicializarUI() {
   const demandaTabela = document.getElementById("demandaTabela");
   const custoTotalDiv = document.getElementById("custoTotal");
 
-  // Preencher dropdowns
   locais.forEach(local => {
     partidaSel.add(new Option(local, local));
   });
@@ -215,11 +212,9 @@ function inicializarUI() {
   
   function atualizarMelhoresLucros() {
     const listaLucros = [];
-    // Precisa aguardar o DOM ter os selects (serão adicionados após o primeiro render)
     const filtroPartida = document.getElementById("filtroPartida")?.value || "";
     const filtroDestino = document.getElementById("filtroDestino")?.value || "";
 
-    // Antes de gerar o novo HTML, capture os valores atuais dos filtros (se existirem no DOM)
     const filtroPartidaValor = document.getElementById("filtroPartida")?.value || "";
     const filtroDestinoValor = document.getElementById("filtroDestino")?.value || "";
 
@@ -253,7 +248,7 @@ function inicializarUI() {
           const tiles = distancias[chaveDistancia];
   
           if (tiles) {
-            const valor = (20000 + (18 * tiles)) * (percentagem / 100);
+            const valor = (35000 + (8.5 * tiles)) * (percentagem / 100);
             const lucro = valor - custo;
             listaLucros.push({
               nome,
@@ -332,7 +327,7 @@ function inicializarUI() {
     let lucroValor = 0;
 
     if (tiles) {
-      const valor = (20000 + (18 * tiles)) * (percentagem / 100);
+      const valor = (35000 + (8.5 * tiles)) * (percentagem / 100);
       lucroValor = valor - custo;
       valorStr = `${valor} silver`;
       lucroStr = `${lucroValor.toFixed(0)} silver`;
@@ -354,7 +349,7 @@ function inicializarUI() {
   demandaTabela.innerHTML = html;
 
   document.querySelectorAll('#demandaTabela input[type="number"]').forEach(input => {
-    input.addEventListener('change', atualizarTudo); // Atualiza tudo sempre que um valor for alterado
+    input.addEventListener('change', atualizarTudo); 
   });
 }
 
@@ -364,11 +359,9 @@ function inicializarUI() {
     atualizarMelhoresLucros();
   }
   
-  
-  // Eventos principais
+
   tradepackSel.addEventListener("change", atualizarTudo);
   partidaSel.addEventListener("change", atualizarTudo);
 
-  // Início
   atualizarTudo();
 }
