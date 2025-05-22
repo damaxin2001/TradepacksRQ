@@ -186,3 +186,29 @@ footer {
   }
 }
 
+.btn-limpar {
+    background-color: #c62828;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-limpar:hover {
+    background-color: #b71c1c;
+}
+
+.toggle-boost {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.toggle-boost input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}

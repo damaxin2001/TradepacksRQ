@@ -160,6 +160,16 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
+document.getElementById("limparLocalStorage").addEventListener("click", () => {
+  if (confirm("Tens a certeza que queres limpar todos os dados guardados?")) {
+    localStorage.clear();
+    location.reload();
+  }
+});
+
+let boostAtivo = localStorage.getItem('boostAtivo') === 'true' || true;
+
+
 function inicializarUI() {
   const partidaSel = document.getElementById("partida");
   const tradepackSel = document.getElementById("tradepack");
@@ -177,6 +187,11 @@ function inicializarUI() {
 
   function obterChaveNormalizada(a, b) {
     return [a, b].sort().join("|");
+  }
+
+  function calcularValor(tiles, percentagem) {
+      const base = (35000 + (8.5 * tiles)) * (percentagem / 100);
+      return boostAtivo ? base * 1.05 : base;
   }
 
   function calcularCustoTotal() {
@@ -198,7 +213,9 @@ function inicializarUI() {
       const precoKey = `preco_${item}`;
       const preco = localStorage.getItem(precoKey) || "";
       html += `
-        <label>${item} (${ingredientes[item]} unidades):</label>
+        <label>
+          <span class="copyable" title="Clique para copiar">${item}</span> (${ingredientes[item]} unidades):
+        </label>
         <input type="number" min="0" value="${preco}" 
           onchange="localStorage.setItem(&quot;${precoKey}&quot;, this.value); atualizarTudo();">
       `;
@@ -208,6 +225,7 @@ function inicializarUI() {
     document.querySelectorAll('#receitaContainer input[type="number"]').forEach(input => {
       input.addEventListener('change', atualizarTudo); // Atualiza tudo sempre que um valor for alterado
     });
+    setupCopyListeners();
   }
   
   function atualizarMelhoresLucros() {
@@ -248,7 +266,7 @@ function inicializarUI() {
           const tiles = distancias[chaveDistancia];
   
           if (tiles) {
-            const valor = (35000 + (8.5 * tiles)) * (percentagem / 100);
+            const valor = calcularValor(tiles, percentagem);
             const lucro = valor - custo;
             listaLucros.push({
               nome,
@@ -300,58 +318,82 @@ function inicializarUI() {
     document.getElementById("filtroPartida").addEventListener("change", atualizarMelhoresLucros);
     document.getElementById("filtroDestino").addEventListener("change", atualizarMelhoresLucros); 
 
+    document.getElementById("boostToggle").addEventListener("change", function() {
+    boostAtivo = this.checked;
+    localStorage.setItem('boostAtivo', boostAtivo);
+    atualizarTudo();
+    });
   }
   
   function atualizarDemandaTabela() {
-  const tradepack = tradepackSel.value;
-  const partida = partidaSel.value;
-  const custo = calcularCustoTotal();
-  custoTotalDiv.textContent = `Custo Total: ${custo} silver`;
+    const tradepack = tradepackSel.value;
+    const partida = partidaSel.value;
+    const custo = calcularCustoTotal();
+    custoTotalDiv.textContent = `Custo Total: ${custo} silver`;
 
-  let html = `
-    <table>
-      <tr>
-        <th>Local</th>
-        <th>Demanda (%)</th>
-        <th>Lucro</th>
-      </tr>
-  `;
-
-  locais.forEach(local => {
-    const key = `demanda_${tradepack}_${local}`;
-    const percentagem = parseFloat(localStorage.getItem(key) ?? "100");
-    const chaveDistancia = obterChaveNormalizada(partida, local);
-    const tiles = distancias[chaveDistancia];
-
-    let valorStr = "-", lucroStr = "-";
-    let lucroValor = 0;
-
-    if (tiles) {
-      const valor = (35000 + (8.5 * tiles)) * (percentagem / 100);
-      lucroValor = valor - custo;
-      valorStr = `${valor} silver`;
-      lucroStr = `${lucroValor.toFixed(0)} silver`;
-    }
-
-    html += `
-      <tr>
-        <td>${local}</td>
-        <td>
-          <input type="number" min="0" value="${percentagem}" 
-            onchange="localStorage.setItem('${key}', this.value); atualizarTudo();">
-        </td>
-        <td style="color: ${lucroValor < 0 ? 'red' : 'green'}">${lucroStr}</td>
-      </tr>
+    let html = `
+      <table>
+        <tr>
+          <th>Local</th>
+          <th>Demanda (%)</th>
+          <th>Lucro</th>
+        </tr>
     `;
-  });
 
-  html += "</table>";
-  demandaTabela.innerHTML = html;
+    locais.forEach(local => {
+      const key = `demanda_${tradepack}_${local}`;
+      const percentagem = parseFloat(localStorage.getItem(key) ?? "100");
+      const chaveDistancia = obterChaveNormalizada(partida, local);
+      const tiles = distancias[chaveDistancia];
 
-  document.querySelectorAll('#demandaTabela input[type="number"]').forEach(input => {
-    input.addEventListener('change', atualizarTudo); 
-  });
-}
+      let valorStr = "-", lucroStr = "-";
+      let lucroValor = 0;
+
+      if (tiles) {
+        const valor = calcularValor(tiles, percentagem);
+        lucroValor = valor - custo;
+        valorStr = `${valor} silver`;
+        lucroStr = `${lucroValor.toFixed(0)} silver`;
+      }
+
+      html += `
+        <tr>
+          <td>${local}</td>
+          <td>
+            <input type="number" min="0" value="${percentagem}" 
+              onchange="localStorage.setItem('${key}', this.value); atualizarTudo();">
+          </td>
+          <td style="color: ${lucroValor < 0 ? 'red' : 'green'}">${lucroStr}</td>
+        </tr>
+      `;
+    });
+
+    html += "</table>";
+    demandaTabela.innerHTML = html;
+
+    document.querySelectorAll('#demandaTabela input[type="number"]').forEach(input => {
+      input.addEventListener('change', atualizarTudo); 
+    });
+  }
+
+  function setupCopyListeners() {
+    document.querySelectorAll(".copyable").forEach(el => {
+      el.style.cursor = "pointer"; // muda cursor para indicar clicável
+      el.onclick = async () => {
+        try {
+          await navigator.clipboard.writeText(el.textContent);
+          // feedback visual simples
+          const originalText = el.textContent;
+          el.textContent = "Copiado!";
+          setTimeout(() => {
+            el.textContent = originalText;
+          }, 1000);
+        } catch (err) {
+          alert("Erro ao copiar: " + err);
+        }
+      };
+    });
+  }
 
   function atualizarTudo() {
     atualizarReceitaUI();
@@ -359,7 +401,7 @@ function inicializarUI() {
     atualizarMelhoresLucros();
   }
   
-
+  document.getElementById("boostToggle").checked = boostAtivo;
   tradepackSel.addEventListener("change", atualizarTudo);
   partidaSel.addEventListener("change", atualizarTudo);
 
