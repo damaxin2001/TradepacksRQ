@@ -1,6 +1,6 @@
 const locais = [
   "Riverend", "Margrove", "Orca Bay", "Seabreeze", "Tarmire",
-  "Darzuac", "Gilead", "Glaceforde", "Ravencrest", "Defiance", "Dras Ashar"
+  "Darzuac", "Gilead", "Glaceforde", "Ravencrest", "Defiance", "Dras Ashar", "Kari'vir"
 ];
 
 const distancias = {
@@ -15,6 +15,7 @@ const distancias = {
   "Riverend|Ravencrest": 650,
   "Riverend|Defiance": 493,
   "Riverend|Dras Ashar": 1954,
+  "Riverend|Kari'vir": 1527,
 
   "Margrove|Riverend": 1008,
   "Margrove|Margrove": 0,
@@ -27,6 +28,7 @@ const distancias = {
   "Margrove|Ravencrest": 603,
   "Margrove|Defiance": 1501,
   "Margrove|Dras Ashar": 2616,
+  "Margrove|Kari'vir": 2061,
 
   "Orca Bay|Riverend": 1336,
   "Orca Bay|Margrove": 1205,
@@ -39,6 +41,7 @@ const distancias = {
   "Orca Bay|Ravencrest": 686,
   "Orca Bay|Defiance": 1829,
   "Orca Bay|Dras Ashar": 2699,
+  "Orca Bay|Kari'vir": 2724,
 
   "Seabreeze|Riverend": 2228,
   "Seabreeze|Margrove": 1789,
@@ -51,6 +54,8 @@ const distancias = {
   "Seabreeze|Ravencrest": 1578,
   "Seabreeze|Defiance": 2721,
   "Seabreeze|Dras Ashar": 3591,
+  "Seabreeze|Kari'vir": 3616,
+  
 
   "Tarmire|Riverend": 1299,
   "Tarmire|Margrove": 1437,
@@ -63,6 +68,7 @@ const distancias = {
   "Tarmire|Ravencrest": 834,
   "Tarmire|Defiance": 1630,
   "Tarmire|Dras Ashar": 1989,
+  "Tarmire|Kari'vir": 2826,
 
   "Darzuac|Riverend": 956,
   "Darzuac|Margrove": 1618,
@@ -75,6 +81,7 @@ const distancias = {
   "Darzuac|Ravencrest": 1015,
   "Darzuac|Defiance": 1287,
   "Darzuac|Dras Ashar": 1233,
+  "Darzuac|Kari'vir": 2483,
 
   "Gilead|Riverend": 2316,
   "Gilead|Margrove": 2185,
@@ -87,6 +94,7 @@ const distancias = {
   "Gilead|Ravencrest": 1666,
   "Gilead|Defiance": 2809,
   "Gilead|Dras Ashar": 3679,
+  "Gilead|Kari'vir": 3704,
 
   "Glaceforde|Riverend": 1928,
   "Glaceforde|Margrove": 920,
@@ -99,6 +107,7 @@ const distancias = {
   "Glaceforde|Ravencrest": 1367,
   "Glaceforde|Defiance": 2421,
   "Glaceforde|Dras Ashar": 3380,
+  "Glaceforde|Kari'vir": 2981,
 
   "Ravencrest|Riverend": 650,
   "Ravencrest|Margrove": 603,
@@ -111,6 +120,7 @@ const distancias = {
   "Ravencrest|Ravencrest": 0,
   "Ravencrest|Defiance": 1143,
   "Ravencrest|Dras Ashar": 2013,
+  "Ravencrest|Kari'vir": 2038,
 
   "Defiance|Riverend": 493,
   "Defiance|Margrove": 1501,
@@ -123,6 +133,7 @@ const distancias = {
   "Defiance|Ravencrest": 1143,
   "Defiance|Defiance": 0,
   "Defiance|Dras Ashar": 2285,
+  "Defiance|Kari'vir": 2020,
 
   "Dras Ashar|Riverend": 1954,
   "Dras Ashar|Margrove": 2616,
@@ -135,6 +146,20 @@ const distancias = {
   "Dras Ashar|Ravencrest": 2013,
   "Dras Ashar|Defiance": 2285,
   "Dras Ashar|Dras Ashar": 0,
+  "Dras Ashar|Kari'vir": 3481,
+
+  "Kari'vir|Riverend": 1527,
+  "Kari'vir|Margrove": 2061,
+  "Kari'vir|Orca Bay": 2724,
+  "Kari'vir|Seabreeze": 3616,
+  "Kari'vir|Tarmire": 2826,
+  "Kari'vir|Darzuac": 2483,
+  "Kari'vir|Gilead": 3704,
+  "Kari'vir|Glaceforde": 2981,
+  "Kari'vir|Ravencrest": 2038,
+  "Kari'vir|Defiance": 2020,
+  "Kari'vir|Dras Ashar": 3481,
+  "Kari'vir|Kari'vir": 0
 };
 
 const distanciasNormalizadas = {};
