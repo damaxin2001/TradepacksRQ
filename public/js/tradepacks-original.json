@@ -105,11 +105,26 @@
         "Egg": 246
       }
     },
+    "Elemental Sprout": {
+      "receita": {
+        "Crystal Leaf": 125,
+        "Rocky Cap": 120,
+        "Fire Cap": 90
+      }
+    },
     "Exotic Fruits": {
       "receita": {
         "Watermelon": 52,
         "Sunberry": 70,
         "Moonberry": 62
+      }
+    },
+    "Exotic Spices": {
+      "receita": {
+        "Sunberry": 60,
+        "Flaming Spores": 100,
+        "Chest Warmer": 150,
+        "Juicy Roots": 92
       }
     },
     "Fried Chicken": {
@@ -141,6 +156,14 @@
         "Small Log": 110,
         "Coal": 100,
         "Cotton": 20
+      }
+    },
+    "Hardy Roots": {
+      "receita": {
+        "Carrot": 286,
+        "Purple Roots": 65,
+        "Cold Roots": 175,
+        "Thin Roots": 375
       }
     },
     "Juicers Box": {
@@ -293,6 +316,13 @@
         "Blueberry": 212
       }
     },
+    "Seer’s Support Pack": {
+      "receita": {
+        "Shadow Stem": 190,
+        "Mindbender": 132,
+        "Feather": 20
+      }
+    },
     "Settler’s Rations": {
       "receita": {
         "Corn": 200,
@@ -351,6 +381,14 @@
         "Grape": 200,
         "Blueberry": 385,
         "Moonberry": 92
+      }
+    },
+    "Yornish Seasonings": {
+      "receita": {
+        "Twisted Flower": 100,
+        "Withered Stem": 185,
+        "Fungal Dust": 500,
+        "Salt": 14
       }
     }
   }
