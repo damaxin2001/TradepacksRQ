@@ -242,7 +242,7 @@ function inicializarUI() {
           <span class="copyable" title="Clique para copiar">${item}</span> (${ingredientes[item]} unidades):
         </label>
         <input type="number" min="0" value="${preco}" 
-          onchange="localStorage.setItem(&quot;${precoKey}&quot;, this.value); atualizarTudo();">
+          onchange="localStorage.setItem(&quot;preco_${item.replace(/'/g, "\\'")}&quot;, this.value); atualizarTudo();">
       `;
     }
     receitaContainer.innerHTML = html;
@@ -386,7 +386,7 @@ function inicializarUI() {
           <td>${local}</td>
           <td>
             <input type="number" min="0" value="${percentagem}" 
-              onchange="localStorage.setItem('${key}', this.value); atualizarTudo();">
+              onchange="localStorage.setItem('demanda_${tradepack.replace(/'/g, "\\'")}_${local.replace(/'/g, "\\'")}', this.value); atualizarTudo();">
           </td>
           <td style="color: ${lucroValor < 0 ? 'red' : 'green'}">${lucroStr}</td>
         </tr>
